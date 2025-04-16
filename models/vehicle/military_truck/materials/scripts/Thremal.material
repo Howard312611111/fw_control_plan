@@ -1,0 +1,17 @@
+material Thermal
+{
+	technique
+	{
+		pass
+		{
+			ambient 0 0 0 0
+	        diffuse 0 0 0 0
+	        specular 0 0 0 0
+			emission 0 0 0 0
+
+			texture_unit
+			{
+			}
+		}
+	}
+}

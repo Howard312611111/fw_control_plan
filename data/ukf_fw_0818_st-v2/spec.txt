@@ -1,0 +1,48 @@
+Sepc.
+
+
+uav
+- velocity: 15.35 m/s
+
+Car
+- velocity: 16 m/s
+
+
+
+
+
+UKF
+
+        
+<!-- Target Estimation Initial Process Covariance -->
+<!-- x1, x2, rq, vq -->
+<param name="P_init_0" value="0.05" />
+<param name="P_init_1" value="0.05" />
+<!-- param name="P_init_2" value="0.1" / -->
+<param name="P_init_3" value="80.0" />
+<param name="P_init_4" value="80.0" />
+<param name="P_init_5" value="80.0" />
+<param name="P_init_6" value="1.0" />
+<param name="P_init_7" value="1.0" />
+<param name="P_init_8" value="1.0" />
+
+<!-- Target Estimation Measurement Noise Covariance -->
+<!-- u, v, rc -->
+<param name="measurement_noise_0" value="5" />  
+<param name="measurement_noise_1" value="5" />
+<!-- param name="measurement_noise_2" value="0.5" / -->
+<param name="measurement_noise_3" value="0.0001" />
+<param name="measurement_noise_4" value="0.0001" />
+<param name="measurement_noise_5" value="0.0001" />
+
+<!-- Target Estimation Initial Process Noise Covariance -->
+<!-- x1, x2, rq, vq -->
+<param name="process_noise_0" value="0.008" />
+<param name="process_noise_1" value="0.008" />
+<!-- param name="process_noise_2" value="0.0005" / -->
+<param name="process_noise_3" value="0.5" />
+<param name="process_noise_4" value="0.5" />
+<param name="process_noise_5" value="0.5" />
+<param name="process_noise_6" value="0.05" />
+<param name="process_noise_7" value="0.05" />
+<param name="process_noise_8" value="0.05" />

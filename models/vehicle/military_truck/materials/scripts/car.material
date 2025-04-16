@@ -1,0 +1,15 @@
+material Car/Diffuse
+{
+	receive_shadows off
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture pac_3_launcher_d.tga
+				pac_3_tractor_d.tga
+			}
+		}
+	}
+}

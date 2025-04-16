@@ -1,0 +1,10 @@
+＃＃airspeed:
+- FW_AIRSPD_MAX 35
+- FW_AIRSPD_TRIM 33
+
+＃＃climb rate:
+- FW_T_CLMB_MAX 15
+- FW_T_CLMB_R_SP 15
+- FW_T_SINK_MAX 15
+- FW_T_SINK_R_SP 15
+- FW_T_SINK_MIN 5

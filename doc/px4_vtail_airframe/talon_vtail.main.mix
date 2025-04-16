@@ -1,0 +1,47 @@
+Aileron/v-tail/throttle/wheel/flaps mixer for PX4FMU
+=======================================================
+
+This file defines mixers suitable for controlling a fixed wing aircraft with
+aileron, v-tail (rudder, elevator), throttle, steerable wheel and flaps
+using PX4FMU.
+The configuration assumes the aileron servos are connected to PX4FMU servo
+output 0 and 1, the tail servos to output 2 and 3, the throttle
+to output 4, the wheel to output 5 and the flaps to output 6 and 7.
+
+Inputs to the mixer come from channel group 0 (vehicle attitude), channels 0
+(roll), 1 (pitch), 2 (yaw) and 3 (thrust) 4 (flaps) 6 (flaperon).
+-----------------------------------------------------------------
+
+Z:
+
+Z:
+
+# mixer for the left aileron
+M: 1
+O:      10000  10000      0 -10000  10000
+S: 0 0 -10000 -10000      0 -10000  10000
+
+# mixer for the right aileron
+M: 1
+O:      10000  10000      0 -10000  10000
+S: 0 0  10000  10000      0 -10000  10000
+
+V-tail mixers
+-------------
+
+M: 2
+O:       10000  10000     0 -10000  10000
+S: 0 2  -7000  -7000      0 -10000  10000
+S: 0 1   8000   8000      0 -10000  10000
+
+M: 2
+O:      10000  10000      0 -10000  10000
+S: 0 2   7000   7000      0 -10000  10000
+S: 0 1   8000   8000      0 -10000  10000
+
+
+# mixer for the pusher/puller throttle
+M: 1
+O:      10000  10000      0 -10000  10000
+S: 0 3      0  20000 -10000 -10000  10000
+

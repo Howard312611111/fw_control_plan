@@ -1,0 +1,264 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+
+  <model name='Car'>
+    <static>true</static>
+
+    <link name="box">
+
+      <pose frame=''>0 -60 5 0 0 0</pose>
+
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>1 1 1</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>1 1 1</size>
+          </box>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name='car01'>
+
+      <pose frame=''>0 0 10.0 1.5829 -0 0</pose>
+      
+       <collision name='collision'>
+        <geometry>
+          <mesh>
+            <uri>/home/leo/plan/src/model_test/models/PAC3/File Formats/OBJ/PAC3.obj</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>>
+
+      <visual name='visual'>
+        <geometry>
+          <mesh>
+            <uri>/home/leo/plan/src/model_test/models/PAC3/File Formats/OBJ/PAC3.obj</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://car_model/materials/scripts</uri>
+            <uri>model://car_model/materials/textures</uri>
+            <name>Car/Diffuse</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+
+    <link name="tree_1">
+      <pose>0 10 0 0 0 0</pose>
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <uri>model://oak_tree/meshes/oak_tree.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="branch">
+        <geometry>
+          <mesh>
+            <uri>model://oak_tree/meshes/oak_tree.dae</uri>
+            <submesh>
+              <name>Branch</name>
+            </submesh>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://oak_tree/materials/scripts/</uri>
+            <uri>model://oak_tree/materials/textures/</uri>
+            <name>OakTree/Branch</name>
+          </script>
+        </material>
+      </visual>
+      <visual name="bark">
+        <geometry>
+          <mesh>
+            <uri>model://oak_tree/meshes/oak_tree.dae</uri>
+            <submesh>
+              <name>Bark</name>
+            </submesh>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://oak_tree/materials/scripts/</uri>
+            <uri>model://oak_tree/materials/textures/</uri>
+            <name>OakTree/Bark</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+
+    <link name="tree_2">
+      <pose>-10 -10 0 0 0 0</pose>
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <uri>model://pine_tree/meshes/pine_tree.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="branch">
+        <geometry>
+          <mesh>
+            <uri>model://pine_tree/meshes/pine_tree.dae</uri>
+            <submesh>
+              <name>Branch</name>
+            </submesh>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://pine_tree/materials/scripts/</uri>
+            <uri>model://pine_tree/materials/textures/</uri>
+            <name>PineTree/Branch</name>
+          </script>
+        </material>
+      </visual>
+      <visual name="bark">
+        <geometry>
+          <mesh>
+            <uri>model://pine_tree/meshes/pine_tree.dae</uri>
+            <submesh>
+              <name>Bark</name>
+            </submesh>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://pine_tree/materials/scripts/</uri>
+            <uri>model://pine_tree/materials/textures/</uri>
+            <name>PineTree/Bark</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+
+    <link name="tree_3">
+      <pose>10 -10 0 0 0 0</pose>
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <uri>model://pine_tree/meshes/pine_tree.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="branch">
+        <geometry>
+          <mesh>
+            <uri>model://pine_tree/meshes/pine_tree.dae</uri>
+            <submesh>
+              <name>Branch</name>
+            </submesh>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://pine_tree/materials/scripts/</uri>
+            <uri>model://pine_tree/materials/textures/</uri>
+            <name>PineTree/Branch</name>
+          </script>
+        </material>
+      </visual>
+      <visual name="bark">
+        <geometry>
+          <mesh>
+            <uri>model://pine_tree/meshes/pine_tree.dae</uri>
+            <submesh>
+              <name>Bark</name>
+            </submesh>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://pine_tree/materials/scripts/</uri>
+            <uri>model://pine_tree/materials/textures/</uri>
+            <name>PineTree/Bark</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+
+    <link name="car02">
+      <pose>0 -10 10.0 0 0 -1.5713</pose>
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <scale>0.08 0.08 0.08</scale>
+            <uri>model://fire_truck/meshes/fire_truck.obj</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <scale>0.08 0.08 0.08</scale>
+            <uri>model://fire_truck/meshes/fire_truck.obj</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <emissive>0.7 0 0 1</emissive>
+          <ambient>1 0.1 0.1 1</ambient>
+          <diffuse>1 0 0 1</diffuse>
+          <specular>1 0 0 1</specular>
+        </material>
+      </visual>
+    </link>
+
+    <link name="car03">
+      <pose>30 30 10.0 0 0 0</pose>
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <scale>0.015 0.015 0.015</scale>
+            <uri>model://bus/meshes/bus.obj</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <scale>0.015 0.015 0.015</scale>
+            <uri>model://bus/meshes/bus.obj</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="mcmillan_field">
+      <pose>0 0 -10 0 0 0</pose>
+      <collision name="collision_mcmillan">
+        <geometry>
+          <heightmap>
+            <uri>model://mcmillan_airfield/media/mcmillan_elevation.tif</uri>
+            <pos>0 0 -300</pos>
+          </heightmap>
+        </geometry>
+      </collision>
+      <visual name="visual_mcmillan">
+        <geometry>
+          <heightmap>
+            <texture>
+              <diffuse>model://mcmillan_airfield/media/textures/mcmillan_color.png</diffuse>
+              <normal>file://media/materials/textures/flat_normal.png</normal>
+              <size>5700</size>
+            </texture>
+            <uri>model://mcmillan_airfield/media/mcmillan_elevation.tif</uri>
+            <pos>0 0 -300</pos>
+          </heightmap>
+        </geometry>
+      </visual>
+    </link>
+
+  </model>
+</sdf>

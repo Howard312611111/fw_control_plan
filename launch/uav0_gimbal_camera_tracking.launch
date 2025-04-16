@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+
+	<group ns="uav0">
+		<node pkg="fw_control_plan" name="gimbal_control" type="gimbal_control" output="screen" />
+		<rosparam file="$(find fw_control_plan)/config/params_ibvs.yaml"/>
+	</group>
+	
+</launch>
+

@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="military_truck">
+    <static>true</static>
+    <link name="link">
+      <pose frame=''>0 0 0 1.57 0 0</pose>
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://military_truck/meshes/File Formats/OBJ/PAC3.obj</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='visual'>
+        <geometry>
+          <mesh>
+            <uri>model://military_truck/meshes/File Formats/OBJ/PAC3.obj</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://military_truck/materials/scripts</uri>
+            <uri>model://military_truck/materials/textures</uri>
+            <name>Car/Diffuse</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>
